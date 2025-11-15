@@ -1,0 +1,201 @@
+/*Font declarations*/
+
+@font-face {
+    font-family: SF Pro Display-UltraThin;
+    src: url(/assets/fonts/SFProDisplay-Ultralight.ttf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: SF Pro Display-Thin;    
+    src: url(/assets/fonts/SFProDisplay-Thin.ttf);
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: SF Pro Display-Light;    
+    src: url(/assets/fonts/SFProDisplay-Light.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: SF Pro Display-Regular;    
+    src: url(/assets/fonts/SFProDisplay-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: SF Pro Display-Medium;    
+    src: url(/assets/fonts/SFProDisplay-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: SF Pro Display-SemiBold;    
+    src: url(/assets/fonts/SFProDisplay-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: SF Pro Display-Bold;    
+    src: url(/assets/fonts/SFProDisplay-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: SF Pro Display-Heavy;    
+    src: url(/assets/fonts/SFProDisplay-Heavy.ttf);
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: Frenzy;
+    src: url(/assets/fonts/Darkbyte.ttf);
+    font-weight: 1000;
+}
+
+/*Format the page*/
+
+body{
+    background-color: rgb(18, 18, 18);
+    padding-left: 0%;
+    margin-top: 90px;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* NavBar formatting */
+
+#navDiv{
+    /* border-color: rgba(255, 255, 255, 0.34); */
+    border-right: rgba(255, 255, 255, 0.14);
+    border-bottom: rgba(255, 255, 255, 0.14);
+    border-top: rgba(0, 0, 0, 0.14);
+    border-left: rgba(0, 0, 0, 0.14);
+    border-width: 1px;
+    border-style: solid;
+    background-color: rgba(0,0,0,0.04);
+	backdrop-filter: blur(0.8px);
+    border-radius: 100px;
+    height: 50px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    display: flex;
+    position: fixed;
+    width: 95%;
+    left: 2%;
+    top: 2%;
+    z-index: 10;
+}
+
+.navButtons{
+    border-radius: 100px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.164);
+    width: 70px;
+    color: #23adfc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: SF Pro Display-Bold;
+    font-size: 85%;
+    backdrop-filter: blur(30px);  
+    transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    z-index: 10;
+}
+
+.navButtonImages{
+    height: 30px;
+    /* position: relative;
+    left: 20%;
+    bottom: 30%; */
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
+}
+
+.navButtons:hover{
+    transform: scale(1.2);
+    font-size: 80%;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(0.6px);
+}
+
+.navButtons:hover img{
+    transform: scale(1);
+}
+
+.navButtons:hover .navDiv{
+    transform: scale(5);
+}
+
+#about{
+    left: 65%;
+}
+
+/* Other stuff formatting */
+
+#q{
+	position: absolute;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    left: 0.6%;
+	top: 14%;
+}
+
+#name{
+	position: absolute;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 204, 0);
+    font-size: 50px;
+    text-align: center;
+    left: 28%;
+	top: 14%;
+}
+
+@keyframes rainbow {
+  0% { color: red; }
+  50% { color: blue; }
+  100% { color: red; }
+}
+
+#tejasguptafrenzy{
+    z-index: 0;
+    position: relative;
+    bottom: 157px;
+}
+
+.frenzytext {
+    animation: rainbow 10s infinite;
+    font-family: Frenzy;
+    transform: rotateZ(-45deg) translate(20%, -2000%);
+    z-index: 0;
+}
+
+#frenzyVideo{
+	width: 100%;
+}
+
+#about{
+	position: absolute;
+	z-index: 1; 
+	left: 10%;
+	top: 10%;
+	width: 99%;
+}
+
+.norm{
+    text-align: center;
+    font-family: SF Pro Display-Regular;
+    color: white;
+}
+
+.uhoh{
+    text-align: center;
+    font-family: SF Pro Display-Heavy;
+    color: white;
+}
