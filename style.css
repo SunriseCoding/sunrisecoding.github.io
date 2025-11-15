@@ -176,11 +176,8 @@ a{
     z-index: 0;
 }
 
-/* #frenzyVideo{
-	position: absolute;
-	top: 0%;
-	width: 99%;
-	z-index: 0;
+#frenzyVideo{
+	width: 100%;
 }
 
 #about{
