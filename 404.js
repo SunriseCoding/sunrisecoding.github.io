@@ -33,3 +33,9 @@ orelse.addEventListener("mouseenter", function(e) {
     document.body.style.background = "url('/assets/images/golden_freddy.png') no-repeat center, rgb(18, 18, 18)";
     // document.writeln("Hi");
 });
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "e" || event.key === "E") {
+    window.location.href = "https://sunrisecoding.github.io/elseiflol";
+  }
+});
