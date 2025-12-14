@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Very Serious Login System™</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: rgba(0,0,0,0.3);
+      padding: 25px;
+      border-radius: 12px;
+      width: 350px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+
+    button {
+      cursor: pointer;
+      background: #00c6ff;
+      color: black;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #00a8d6;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .option {
+      margin-top: 15px;
+      padding: 12px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 10px;
+      cursor: pointer;
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    .option:hover {
+      background: rgba(255,255,255,0.3);
+    }
+
+    a {
+      display: block;
+      margin-top: 10px;
+      color: #00ffea;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="loginBox">
+    <h2>Login</h2>
+    <input id="username" placeholder="Username" />
+    <input id="password" type="password" placeholder="Password (anything)" />
+    <button onclick="login()">Login</button>
+    <p id="error" style="color:#ffb3b3;"></p>
+  </div>
+
+  <div class="card hidden" id="menuBox">
+    <h2>Choose Your PPT</h2>
+
+    <div class="option" onclick="showLink('serious')">
+      Serious English PPT (Gamma AI)
+    </div>
+
+    <div class="option" onclick="showLink('funny')">
+      My English PPT Ultra Pro Max super duper crazy free robux glitch 2000 Ultra
+    </div>
+
+    <div id="links"></div>
+  </div>
+
+<script>
+  // Classmates 90000000000000000000 Pro Max Ultra
+  const allowedUsers = ["tejas", "aditya", "aarav", "reyansh", "kuljeet", "b.", "b. c.", "bc", "b", "c", "shrisheesh", "srisheesh", "shreesheesh", "sreesheesh", "yash", "moulik", "black", "arpit", "po", "panda", "saanvi", "shagun", "shripoorna", "siddharth", "siddh", "ayaat", "tarini", "aparna", "mihika", "carol", "aavran", "idk", "sorry", "oops"];
+
+  const pptLinks = {
+    serious: [
+      "https://gamma.app/docs/Reach-for-the-Top-Part-2-The-Inspiring-Journey-of-Maria-Sharapova-kpkvlzf276mx2r6"
+    ],
+    funny: [
+      "https://1drv.ms/p/c/dd2f192bd3116789/IQDjJtr8ifgJT68iCNiZbDyEASaZu6vu1mBn9y5ED3Dm_8g"
+    ]
+  };
+
+  function login() {
+    const user = document.getElementById("username").value.toLowerCase();
+
+    if (allowedUsers.includes(user.toLowerCase())) {
+      document.getElementById("loginBox").classList.add("hidden");
+      document.getElementById("menuBox").classList.remove("hidden");
+    } else {
+      document.getElementById("error").innerText = "Username not allowed try your first name... ONLY IF I KNOW YOU... LOL";
+    }
+  }
+
+  function showLink(type) {
+    const container = document.getElementById("links");
+    container.innerHTML = "";
+
+    pptLinks[type].forEach(link => {
+      const a = document.createElement("a");
+      a.href = link;
+      a.target = "_blank";
+      a.innerText = link;
+      container.appendChild(a);
+    });
+  }
+</script>
+
+</body>
+</html>
